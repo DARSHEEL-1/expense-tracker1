@@ -1,3 +1,5 @@
+
+DEMO video : https://drive.google.com/file/d/16V8mSBMmzPV5RCI051uMccYx0rL6rEfz/view?usp=sharing
 # 💰 MERN Stack Expense Tracker
 
 A full-stack Expense Tracker web application built with MongoDB, Express.js, React (Vite), and Node.js. Includes JWT authentication, real-time balance analytics, transaction management, and secure password hashing.
