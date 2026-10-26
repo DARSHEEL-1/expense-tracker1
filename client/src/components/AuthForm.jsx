@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Lock, Mail, User, Wallet } from 'lucide-react';
 
+// Use live Render backend URL in production, fallback to localhost during development
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://expense-tracker1-4hwb.onrender.com';
+
 export default function AuthForm({ onLogin }) {
   const [isLogin, setIsLogin] = useState(true);
   const [name, setName] = useState('');
@@ -17,7 +20,7 @@ export default function AuthForm({ onLogin }) {
     const payload = isLogin ? { email, password } : { name, email, password };
 
     try {
-      const res = await axios.post(`http://localhost:5000${endpoint}`, payload);
+      const res = await axios.post(`${API_BASE_URL}${endpoint}`, payload);
       onLogin(res.data.data);
     } catch (err) {
       setError(err.response?.data?.error || 'Something went wrong');

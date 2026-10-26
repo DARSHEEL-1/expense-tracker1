@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Wallet, TrendingUp, TrendingDown, Trash2, PlusCircle, LogOut } from 'lucide-react';
 import AuthForm from './components/AuthForm';
-
-const API_URL = 'http://localhost:5000/api/transactions';
+const API_URL = 'https://expense-tracker1-4hwb.onrender.com/api/transactions';
 
 export default function App() {
   const [user, setUser] = useState(() => {
